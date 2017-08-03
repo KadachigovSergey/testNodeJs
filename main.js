@@ -16,7 +16,6 @@ function sortCN(num) {
     for (var i = 0; i < strNum.length; i++) {
         result += strNum[i]*strNum[i];
     }
-
     //Determining what a number
     if (result === 1) {
         return true;
@@ -30,7 +29,6 @@ function sortCN(num) {
 
 //create sum of all cool numbers
 for (var i = cN.min; i <= cN.max; i++) {
-
     sortCN(i) ? cN.sum += i : 0;
 }
 
@@ -56,9 +54,7 @@ for (var i = 1; i <= 100; i++) {
 
 //when all requests is done , we will get info
 Promise.all(cN.allRequests).then(function (res) {
-
     console.log('Secret code = ' + res.join(''));
-
 })
 
 
